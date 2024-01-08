@@ -1,5 +1,5 @@
 const inputs = document.querySelector(".inputs"), // Selects the HTML element that will display the guessed letters or underscores
-resetBtn = document.querySelector(".reset-btn");
+resetBtn = document.querySelector(".reset-btn"); // Selects the reset button element in the HTML using the class "reset-btn"
 
 // Function to log a randomly selected word object from the wordList to the console.
 function randomWord() {
@@ -18,5 +18,5 @@ for (let i = 0; i < word.length; i++) {
 
 randomWord();
 
-resetBtn.addEventListener("click", randomWord);
+resetBtn.addEventListener("click", randomWord); // Adds a click event listener to the reset button, triggering the randomWord function to generate a new word for the game when clicked
 
