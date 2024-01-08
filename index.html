@@ -7,11 +7,39 @@
     <title>Word Guess</title>
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io_/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io_/favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io_/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io_/favicon-16x16.png"
+    />
     <link rel="manifest" href="/site.webmanifest" />
-     <!--Stylesheet-->
-     <link rel="stylesheet" href="assets/css/style.css">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <h1>Guess the Word</h1>
+      <div class="content">
+        <div class="inputs">
+            <input type="text" disabled>
+            <input type="text" disabled>
+            <input type="text" disabled>
+            <input type="text" disabled>
+            <input type="text" disabled>
+            <input type="text" disabled>
+        </div>
+        <div class="details"></div>
+        <p class="hint"> Hint: <span> Hint will be shown here</span> </p>
+        <p class="guess-left"> Remaining guesses: <span> 10</span> </p>
+        <p class="wrong-letter"> Wrong letters: <span> a, b, c, d</span> </p>
+      </div>
+    </div>
+  </body>
 </html>
