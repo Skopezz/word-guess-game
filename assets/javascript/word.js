@@ -107,6 +107,10 @@ let wordList = [
         word: "sonnet",
         hint: "a poem of fourteen lines using any of a number of formal rhyme schemes"
     },
+    {
+        word: "amazon",
+        hint: "the longest river in South America"
+    },
 
     {
         word: "aquarium",

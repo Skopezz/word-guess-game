@@ -1,8 +1,10 @@
+const inputs = document.querySelector(".inputs"), // Selects the HTML element that will display the guessed letters or underscores
+resetBtn = document.querySelector(".reset-btn");
 
 // Function to log a randomly selected word object from the wordList to the console.
 function randomWord() {
 let ranObj = wordList[Math.floor(Math.random() * wordList.length)]; // Generate a random index to select a word from the wordList
-let word = ranObj.word; // Extract the 'word' property from the randomly selected word object (ranObj) and assign it to the variable 'word'.
+let word = ranObj.word; // Retrieves the randomly selected word from the wordList object
 console.log(ranObj); 
 
 let html = "";
@@ -14,6 +16,7 @@ for (let i = 0; i < word.length; i++) {
 
 } 
 
-randomWord()
+randomWord();
 
+resetBtn.addEventListener("click", randomWord);
 
