@@ -21,8 +21,13 @@ inputs.innerHTML = html; // Update the content of the "inputs" element to displa
 
 randomWord();
 
+// Function to handle user input events and obtain the lowercase value for further gameplay.
 function initGame(e) {
     let key = e.target.value.toLowerCase();
+    // Check if the input key is a letter (A-Z or a-z) using a regular expression.
+    if(key.match(/^[A-Za-z]+$/)) {
+
+    }
     console.log(key);
 }
 
