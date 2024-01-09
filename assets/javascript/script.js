@@ -21,6 +21,11 @@ inputs.innerHTML = html; // Update the content of the "inputs" element to displa
 
 randomWord();
 
+function initGame(e) {
+    let key = e.target.value.toLowerCase();
+    console.log(key);
+}
+
 resetBtn.addEventListener("click", randomWord); // Adds a click event listener to the reset button, triggering the randomWord function to generate a new word for the game when clicked
 typingInput.addEventListener("input", initGame); // Adding an event listener to the typing input field to update the game on user input
 document.addEventListener("keydown", () => typingInput.focus()); // Focusing on the typing input when a key is pressed to enable immediate user input
