@@ -1,12 +1,14 @@
 const inputs = document.querySelector(".inputs"), // Selects the HTML element that will display the guessed letters or underscores
 resetBtn = document.querySelector(".reset-btn"), // Selects the reset button element in the HTML using the class "reset-btn"
-hint = document.querySelector(".hint span");// Selecting the hint span element for displaying hints in the word guessing game
+hint = document.querySelector(".hint span"), // Selecting the hint span element for displaying hints in the word guessing game
+typingInput = document.querySelector(".typing-input"); // Selecting the input field for typing guesses in the word guessing game
+
 
 // Function to log a randomly selected word object from the wordList to the console.
 function randomWord() {
 let ranObj = wordList[Math.floor(Math.random() * wordList.length)]; // Generate a random index to select a word from the wordList
 let word = ranObj.word; // Retrieves the randomly selected word from the wordList object
-console.log(ranObj); 
+console.log(word); 
 
 hint.innerText = ranObj.hint; // Setting the hint text content to the hint associated with the randomly selected word
 
@@ -20,4 +22,5 @@ inputs.innerHTML = html; // Update the content of the "inputs" element to displa
 randomWord();
 
 resetBtn.addEventListener("click", randomWord); // Adds a click event listener to the reset button, triggering the randomWord function to generate a new word for the game when clicked
-
+typingInput.addEventListener("input", initGame); // Adding an event listener to the typing input field to update the game on user input
+document.addEventListener("keydown", () => typingInput.focus()); // Focusing on the typing input when a key is pressed to enable immediate user input
