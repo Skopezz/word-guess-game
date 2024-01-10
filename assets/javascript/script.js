@@ -72,5 +72,5 @@ function initGame(e) {
 
 resetBtn.addEventListener("click", randomWord); // Adds a click event listener to the reset button, triggering the randomWord function to generate a new word for the game when clicked
 typingInput.addEventListener("input", initGame); // Adding an event listener to the typing input field to update the game on user input
-inputs.addEventListener("click", () => typingInput.focus());
+inputs.addEventListener("click", () => typingInput.focus());// Add a click event listener to the "inputs" element to focus on the typing input when clicke
 document.addEventListener("keydown", () => typingInput.focus()); // Focusing on the typing input when a key is pressed to enable immediate user input
