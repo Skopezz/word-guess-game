@@ -51,7 +51,7 @@ function initGame(e) {
     typingInput.value = "";
 
 
-    setTimeout (() => {
+    setTimeout (() => { // Set timeout to delay the execution of the provided function so final letter can show
         if(corrects.length === word.length) {
             alert (`Great! you found the word ${word.toUpperCase()}`);
             return randomWord();
@@ -72,4 +72,5 @@ function initGame(e) {
 
 resetBtn.addEventListener("click", randomWord); // Adds a click event listener to the reset button, triggering the randomWord function to generate a new word for the game when clicked
 typingInput.addEventListener("input", initGame); // Adding an event listener to the typing input field to update the game on user input
+inputs.addEventListener("click", () => typingInput.focus());
 document.addEventListener("keydown", () => typingInput.focus()); // Focusing on the typing input when a key is pressed to enable immediate user input
