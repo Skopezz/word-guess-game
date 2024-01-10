@@ -1,19 +1,22 @@
 const inputs = document.querySelector(".inputs"), // Selects the HTML element that will display the guessed letters or underscores
 resetBtn = document.querySelector(".reset-btn"), // Selects the reset button element in the HTML using the class "reset-btn"
 hint = document.querySelector(".hint span"), // Selecting the hint span element for displaying hints in the word guessing game
+guessLeft = document.querySelector(".guess-left span")
 wrongLetter = document.querySelector(".wrong-letter span"),
 typingInput = document.querySelector(".typing-input"); // Selecting the input field for typing guesses in the word guessing game
 
 
-let word, corrects = [], incorrects = [];
+let word,maxGuesses, corrects = [], incorrects = [];
 
 // Function to log a randomly selected word object from the wordList to the console.
 function randomWord() {
 let ranObj = wordList[Math.floor(Math.random() * wordList.length)]; // Generate a random index to select a word from the wordList
 word = ranObj.word; // Retrieves the randomly selected word from the wordList object
+maxGuesses = 8;
 console.log(word); 
 
 hint.innerText = ranObj.hint; // Setting the hint text content to the hint associated with the randomly selected word
+guessLeft.innerText = maxGuesses;
 
 let html = "";
 for (let i = 0; i < word.length; i++) {
@@ -40,11 +43,13 @@ function initGame(e) {
                 inputs.querySelectorAll("input")[i].value = key;
             }
     } else {  
+        maxGuesses--; // Decrements the maximum allowed guesses
         incorrects.push(` ${key}`);
 
     }
-    }
+    guessLeft.innerText = maxGuesses;
     wrongLetter.innerText = incorrectLetters;
+    }
     typingInput.value = "";
     
 }
