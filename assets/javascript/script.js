@@ -13,7 +13,6 @@ function randomWord() {
 let ranObj = wordList[Math.floor(Math.random() * wordList.length)]; // Generate a random index to select a word from the wordList
 word = ranObj.word; // Retrieves the randomly selected word from the wordList object
 maxGuesses = 8; corrects = []; incorrects = [];
-console.log(word); 
 
 hint.innerText = ranObj.hint; // Setting the hint text content to the hint associated with the randomly selected word
 guessLeft.innerText = maxGuesses;
@@ -33,9 +32,7 @@ function initGame(e) {
     let key = e.target.value.toLowerCase();
     // Checks if the input key is a letter (A-Z or a-z) using a regular expression.
     if(key.match(/^[A-Za-z]+$/) && !incorrects.includes(` ${key}`) 
-    && !corrects.includes(` ${key}`)) 
-    {
-        console.log(key);
+    && !corrects.includes(` ${key}`)) { 
         if(word.includes(key)) // Checks if the current guessed letter is included in the target word
         for (let i = 0; i < word.length; i++) {
             // Checks if the current letter in the target word matches the guessed letter
@@ -54,21 +51,22 @@ function initGame(e) {
     typingInput.value = "";
 
 
-
-    if(corrects.length === word.length) {
-        alert (`Great! you found the word ${word.toUpperCase()}`);
-        return randomWord();
-    } else if(maxGuesses < 1) { // Checks if the maximum number of guesses has been exhausted
-        alert("Game over! You don't have remaining guesses");
-        for(let i = 0; i < word.length; i++) { 
-            //Loop through each character in the target word
-
-            inputs.querySelectorAll("input")[i].value = word[i];
-        }
-
-
-    }
+    setTimeout (() => {
+        if(corrects.length === word.length) {
+            alert (`Great! you found the word ${word.toUpperCase()}`);
+            return randomWord();
+        } else if(maxGuesses < 1) { // Checks if the maximum number of guesses has been exhausted
+            alert("Game over! You don't have remaining guesses");
+            for(let i = 0; i < word.length; i++) { 
+                //Loop through each character in the target word
     
+                inputs.querySelectorAll("input")[i].value = word[i];
+            }
+    
+    
+        }
+    } ) ;
+
     
 }
 
