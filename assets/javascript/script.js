@@ -1,10 +1,11 @@
 const inputs = document.querySelector(".inputs"), // Selects the HTML element that will display the guessed letters or underscores
 resetBtn = document.querySelector(".reset-btn"), // Selects the reset button element in the HTML using the class "reset-btn"
 hint = document.querySelector(".hint span"), // Selecting the hint span element for displaying hints in the word guessing game
+wrongLetter = document.querySelector(".wrong-letter span"),
 typingInput = document.querySelector(".typing-input"); // Selecting the input field for typing guesses in the word guessing game
 
 
-let word;
+let word, corrects = [], incorrects = [];
 
 // Function to log a randomly selected word object from the wordList to the console.
 function randomWord() {
@@ -27,19 +28,24 @@ randomWord();
 function initGame(e) {
     let key = e.target.value.toLowerCase();
     // Checks if the input key is a letter (A-Z or a-z) using a regular expression.
-    if(key.match(/^[A-Za-z]+$/)) {
+    if(key.match(/^[A-Za-z]+$/) && !incorrects.includes(` ${key}`) 
+    && !corrects.includes(` ${key}`)) 
+    {
         console.log(key);
         if(word.includes(key)) // Checks if the current guessed letter is included in the target word
         for (let i = 0; i < word.length; i++) {
             // Checks if the current letter in the target word matches the guessed letter
             if(word[i] == key) {
+                corrects.push(key);
                 inputs.querySelectorAll("input")[i].value = key;
             }
     } else {  
-        console.log("letter not found")
+        incorrects.push(` ${key}`);
 
     }
     }
+    wrongLetter.innerText = incorrectLetters;
+    typingInput.value = "";
     
 }
 
