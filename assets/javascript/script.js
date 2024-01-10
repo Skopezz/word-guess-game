@@ -12,11 +12,12 @@ let word,maxGuesses, corrects = [], incorrects = [];
 function randomWord() {
 let ranObj = wordList[Math.floor(Math.random() * wordList.length)]; // Generate a random index to select a word from the wordList
 word = ranObj.word; // Retrieves the randomly selected word from the wordList object
-maxGuesses = 8;
+maxGuesses = 8; corrects = []; incorrects = [];
 console.log(word); 
 
 hint.innerText = ranObj.hint; // Setting the hint text content to the hint associated with the randomly selected word
 guessLeft.innerText = maxGuesses;
+wrongLetter.innerText = incorrects;
 
 let html = "";
 for (let i = 0; i < word.length; i++) {
@@ -48,9 +49,26 @@ function initGame(e) {
 
     }
     guessLeft.innerText = maxGuesses;
-    wrongLetter.innerText = incorrectLetters;
+    wrongLetter.innerText = incorrects;
     }
     typingInput.value = "";
+
+
+
+    if(corrects.length === word.length) {
+        alert (`Great! you found the word ${word.toUpperCase()}`);
+        return randomWord();
+    } else if(maxGuesses < 1) { // Checks if the maximum number of guesses has been exhausted
+        alert("Game over! You don't have remaining guesses");
+        for(let i = 0; i < word.length; i++) { 
+            //Loop through each character in the target word
+
+            inputs.querySelectorAll("input")[i].value = word[i];
+        }
+
+
+    }
+    
     
 }
 
