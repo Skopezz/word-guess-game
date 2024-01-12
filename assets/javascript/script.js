@@ -56,7 +56,7 @@ function initGame(e) {
             alert (`Great! you found the word ${word.toUpperCase()}`);
             return randomWord();
         } else if(maxGuesses < 1) { // Checks if the maximum number of guesses has been exhausted
-            alert("Game over! You don't have remaining guesses");
+            alert("Game over! You don't have any remaining guesses");
             for(let i = 0; i < word.length; i++) { 
                 //Loop through each character in the target word
     
