@@ -75,6 +75,9 @@ Accessibility: The game includes focus-related event listeners, making it access
       -  Largest function has 12 statements in it, while the median is 6.
       -  The most complex function has a cyclomatic complexity value of 7 while the median is 2.
 
+- Lighthouse
+  [Lighthouse](assets/images/Lighthouse.png)
+
 
 ## Deployment
 
