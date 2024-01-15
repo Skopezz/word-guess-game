@@ -99,6 +99,8 @@ I would like to thank Komal for his guidance and support. I would like to thank 
 
 - The list of words were generated from Chat GPT 
 - The code was inspired from the following website -  [Coding Nepal](https://www.codingnepalweb.com/word-guessing-game-html-css-javascript/)
+- Learning about javascript was from [W3Schools](https://www.w3schools.com/js/default.asp) 
+- Love Maths provided foundational learning of Javascript - [Love Maths](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LM101+2021_T1/courseware/2d651bf3f23e48aeb9b9218871912b2e/a8ec361b95e94c25bf8a821654bd57bc/)
 
 
 
