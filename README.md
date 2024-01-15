@@ -76,7 +76,7 @@ Accessibility: The game includes focus-related event listeners, making it access
       -  The most complex function has a cyclomatic complexity value of 7 while the median is 2.
 
 - Lighthouse
-  [Lighthouse](assets/images/Lighthouse.png)
+  [Lighthouse](/assets/images/Lighthouse.png)
 
 
 ## Deployment
@@ -93,12 +93,12 @@ The live link can be found here - https://skopezz.github.io/word-guess-game/
 
 ## Credits 
 
-I would like to thank Komal for his guidance and support. I would like to thank AB on how to learn Javascript. 
+I would like to thank Komal for his guidance and support. I would like to thank AB on how to learn Javascript. I would like to thank Beth as well.
 
 ### Content 
 
 - The list of words were generated from Chat GPT 
-- The code was taken from the following website -  [Tutorial](https://www.codingnepalweb.com/word-guessing-game-html-css-javascript/)
+- The code was inspired from the following website -  [Coding Nepal](https://www.codingnepalweb.com/word-guessing-game-html-css-javascript/)
 
 
 
