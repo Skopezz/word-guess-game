@@ -64,11 +64,11 @@ Accessibility: The game includes focus-related event listeners, making it access
 ### Validator Testing 
 
 - HTML
-    - No errors were returned when passing through the official [W3C validator](assets/images/W3C_validated.png)
+    - No errors were returned when passing through the official ![W3C validator](assets/images/W3C_validated.png)
 - CSS
-    - No errors were found when passing through the official [(Jigsaw) validator](assets/images/CSS%20validated.png)
+    - No errors were found when passing through the official ![(Jigsaw) validator](assets/images/CSS%20validated.png)
 - JavaScript
-    - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+    - No errors were found when passing through the official ![Jshint validator](https://jshint.com/)
       - The following metrics were returned: 
       - There are 5 functions in this file.
       - Function with the largest signature take 1 arguments, while the median is 0
@@ -76,7 +76,7 @@ Accessibility: The game includes focus-related event listeners, making it access
       -  The most complex function has a cyclomatic complexity value of 7 while the median is 2.
 
 - Lighthouse
-  [Lighthouse](/assets/images/Lighthouse.png)
+  ![Lighthouse](/assets/images/Lighthouse.png)
 
 
 ## Deployment
