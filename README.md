@@ -68,7 +68,7 @@ Accessibility: The game includes focus-related event listeners, making it access
 - CSS
     - No errors were found when passing through the official ![(Jigsaw) validator](assets/images/CSS%20validated.png)
 - JavaScript
-    - No errors were found when passing through the official ![Jshint validator](https://jshint.com/)
+    - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
       - The following metrics were returned: 
       - There are 5 functions in this file.
       - Function with the largest signature take 1 arguments, while the median is 0
