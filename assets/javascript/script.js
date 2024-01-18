@@ -12,7 +12,7 @@ let word,maxGuesses, corrects = [], incorrects = [];
 function randomWord() {
 let ranObj = wordList[Math.floor(Math.random() * wordList.length)]; // Generate a random index to select a word from the wordList
 word = ranObj.word; // Retrieves the randomly selected word from the wordList object
-maxGuesses = 8; corrects = []; incorrects = [];
+maxGuesses = 9; corrects = []; incorrects = [];
 
 hint.innerText = ranObj.hint; // Setting the hint text content to the hint associated with the randomly selected word
 guessLeft.innerText = maxGuesses;
